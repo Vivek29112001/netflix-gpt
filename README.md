@@ -20,6 +20,14 @@ If you are developing a production application, we recommend using TypeScript wi
 -routing
 -form validation
 -useRef Hook
+-firebase setup
+-deploying app to production 
+-create signup user account
+-Implement Sign In user Api
+-created Redux Store with user slice
+-Implement signout page
+-updated profile
+-Fetch movies from TMB
 
 
 
@@ -27,6 +35,7 @@ If you are developing a production application, we recommend using TypeScript wi
 ### Login/SignUp
     -Sign In/ Sign Up Form
     -redirect to Browser Page
+
 
 ### Browser (after authentication)
     -Header
