@@ -27,8 +27,11 @@ If you are developing a production application, we recommend using TypeScript wi
 -created Redux Store with user slice
 -Implement signout page
 -updated profile
--Fetch movies from TMB
-
+-BugFix:Signup user displayName and profile picture update
+-BugFix: if the user is logged in redirect /browser to login page and vice-versa
+-BugFix: unscribed to the onAuthstatechanged callback
+-
+ 
 
 
 # Features
