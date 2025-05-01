@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
+import { FaPlay } from 'react-icons/fa';
+import { FiInfo } from 'react-icons/fi';
 
 const VideoTitle = ({ title, overview }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
     <div
-      className="pt-36 px-12 text-black"
+      className="w-screen aspect-video pt-[18%] px-24 text-white absolute bg-gradient-to-r from-black"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       <h1
-        className={`text-6xl m-10 font-bold font-mono transition-transform duration-300 cursor-pointer w-1/4 ${
-          hovered ? 'scale-120' : 'scale-100'
+        className={`text-5xl m-10  font-bold font-mono px-2 py-2 transition-transform duration-200 cursor-pointer w-1/3 ${
+          hovered ? 'scale-120 text-6xl' : 'scale-120'
         }`}
       >
         {title}
@@ -23,10 +25,12 @@ const VideoTitle = ({ title, overview }) => {
         </p>
       )}
       <div className="flex gap-4 mt-4">
-        <button className="flex items-center gap-2 bg-white text-black px-6 py-2 rounded font-semibold hover:bg-gray-300 transition duration-200">
+        <button className="flex items-center gap-2  bg-white text-black px-6 py-2 rounded font-semibold hover:bg-gray-300 transition duration-200 opacity-80">
+          <FaPlay className="text-black" />
           Play
         </button>
-        <button className="flex items-center gap-2 bg-gray-700 text-white px-6 py-2 rounded border border-gray-400 hover:bg-gray-600 transition duration-200">
+        <button className="flex items-center gap-2  bg-gray-700 text-white px-6 py-2 rounded border border-gray-400 hover:bg-gray-600 transition duration-200 opacity-80 ">
+          <FiInfo className="text-white" />
           More Info
         </button>
       </div>
