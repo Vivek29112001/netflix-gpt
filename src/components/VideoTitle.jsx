@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FaPlay } from 'react-icons/fa';
-import { FiInfo } from 'react-icons/fi';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import InfoOutlineIcon from '@mui/icons-material/InfoOutline';
 
 const VideoTitle = ({ title, overview }) => {
   const [hovered, setHovered] = useState(false);
@@ -26,11 +26,11 @@ const VideoTitle = ({ title, overview }) => {
       )}
       <div className="flex gap-4 mt-4">
         <button className="flex items-center gap-2  bg-white text-black px-6 py-2 rounded font-semibold hover:bg-gray-300 transition duration-200 opacity-80">
-          <FaPlay className="text-black" />
+          <PlayArrowIcon className="text-black" />
           Play
         </button>
         <button className="flex items-center gap-2  bg-gray-700 text-white px-6 py-2 rounded border border-gray-400 hover:bg-gray-600 transition duration-200 opacity-80 ">
-          <FiInfo className="text-white" />
+          <InfoOutlineIcon className="text-white" />
           More Info
         </button>
       </div>
