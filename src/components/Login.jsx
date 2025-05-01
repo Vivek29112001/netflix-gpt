@@ -57,7 +57,7 @@ const Login = () => {
                     }).catch((error) => {
                         SetErrorMessage(errorCode + "-" + errorMessage)
                     })
-                    console.log(user)
+                    // console.log(user)
 
                 })
                 .catch((error) => {
@@ -80,7 +80,7 @@ const Login = () => {
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
-                    console.log(errorCode + "-" + errorMessage)
+                    // console.log(errorCode + "-" + errorMessage)
                 });
         }
 
