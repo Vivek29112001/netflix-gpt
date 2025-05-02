@@ -33,6 +33,21 @@ If you are developing a production application, we recommend using TypeScript wi
 - Add hardcoded values to the constant file
 - Register TMDB API & create an app & get access token 
 - get data from TMDB now playing movie list
+- customhook for now playing movies
+- update store with movie data
+- create movielists
+- planing for main and secondary container
+- fatch data for tailer video
+- update store with trailer video data
+- Emedded the youtube viddeo and make it autoplay and mute
+- tailwind classes to make main container look awesome
+- secondary components
+- C
+- TMDB Image CDN URL
+- MAKE the browse page amazing 
+- Created custom hooks fro cards
+
+
  
 
 

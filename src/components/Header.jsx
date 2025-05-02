@@ -52,7 +52,7 @@ const Header = () => {
 
 
     return (
-        <div className="flex justify-between absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 ">
+        <div className="flex justify-between absolute w-screen px-8 py-4 bg-gradient-to-b from-black z-90 ">
             <div className='flex items-center space-x-4'>
                 <img
                     src={logo} alt='Netflix-logo' className='w-32 h-12 mt-2 cursor-pointer mr-12' onClick={() => navigate("/browse")}
