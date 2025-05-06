@@ -8,7 +8,7 @@ import { addUser, removeUser } from '../utils/userSlice'
 import { useDispatch } from 'react-redux'
 import logo from '../assets/ChatFlix.png'
 import { toggleGptSearchView } from '../utils/gptSlice'
-import { SUPPORTED_LANGUAGES } from '../utils/constants'
+import { SUPPORTED_LANGUAGES, USER_AVATAR } from '../utils/constants'
 import { ChangeLanguage } from '../utils/configSlice'
 // import { list } from '../utils/constants'
 import lang  from '../utils/languageConstants'; 
@@ -129,7 +129,7 @@ const Header = () => {
                     <button className='text-2xl font-bold text-white cursor-pointer'
                         onClick={handleGPTsearchButton}>GPT-Search</button>
                     <img
-                        src={user?.photoURL}
+                        src={user?.photoURL || USER_AVATAR}
                         alt="user-icon"
                         className="w-10 h-10 rounded cursor-pointer ml-4"
                     />

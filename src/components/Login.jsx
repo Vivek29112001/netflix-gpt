@@ -77,7 +77,7 @@ const Login = () => {
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
-                    // Consider handling the error here as needed
+                    SetErrorMessage(errorCode + " - " + errorMessage);
                 });
         }
     }
