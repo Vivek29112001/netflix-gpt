@@ -18,7 +18,7 @@ const Header = () => {
     const navigate = useNavigate();
     const user = useSelector(store => store.user)
     const dispatch = useDispatch();
-    const showGptSearch = useSelector(store=> store.gpt.showGptSearch)
+    // const showGptSearch = useSelector(store=> store.gpt.showGptSearch)
 
     const langKey = useSelector((store) => store.config.lang)
 
@@ -103,16 +103,18 @@ const Header = () => {
                 />
                 {user && (
                     <ul className="hidden md:flex space-x-4 text-white text-sm font-medium">
-                    {lang.map((item,key)=> (
-                        <li key={key} className='cursor-pointer hover:text-white'>{lang[langKey].list}</li>
-                    ) )}
+                        {lang[langKey]?.list?.map((item, key) => (
+                            <li key={key} className="cursor-pointer hover:text-white">
+                                {item}
+                            </li>
+                        ))}
                     </ul>
                 )}
             </div>
 
             {user && (
                 <div className="flex items-center relative">
-                    {showGptSearch &&(
+                    {/* {showGptSearch &&( */}
                     <select 
                     className='bg-gray-900 text-white border-none rounded-md p-2 mr-4 cursor-pointer'
                     onChange={handleLanguageChange}
@@ -123,7 +125,7 @@ const Header = () => {
                             </option>
                         )}
                     </select>
-                    )}
+                    {/* // )} */}
                     <button className='text-2xl font-bold text-white cursor-pointer'
                         onClick={handleGPTsearchButton}>GPT-Search</button>
                     <img
