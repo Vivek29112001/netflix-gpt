@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { logo, USER_AVATAR } from '../../utils/constants';
 import { useNavigate } from 'react-router-dom';
+import Header from "../Header"
 
 const Profile = () => {
     const user = useSelector((store) => store.user);
@@ -9,6 +10,7 @@ const Profile = () => {
 
     return (
         <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center px-4 py-6">
+            
             <img 
                 src={logo} 
                 onClick={() => navigate("/browse")}

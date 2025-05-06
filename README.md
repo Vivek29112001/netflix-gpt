@@ -46,7 +46,7 @@ If you are developing a production application, we recommend using TypeScript wi
 - TMDB Image CDN URL
 - MAKE the browse page amazing 
 - Created custom hooks fro cards
-
+- GPT search Feature
 
  
 

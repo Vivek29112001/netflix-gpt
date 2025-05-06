@@ -7,6 +7,9 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { addUser, removeUser } from '../utils/userSlice'
 import { useDispatch } from 'react-redux'
 import { logo } from '../utils/constants'
+import { toggleGptSearchView } from '../utils/gptSlice'
+import { SUPPORTED_LANGUAGES } from '../utils/constants'
+import { ChangeLanguage } from '../utils/configSlice'
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +68,7 @@ const Header = () => {
     const handleSignOut = () => {
         signOut(auth)
             .then(() => { })
-            .catch((error) => {
+            .catch(() => {
                 navigate("/error");
             });
     };
@@ -73,6 +76,15 @@ const Header = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    const handleGPTsearchButton = () => {
+        //toggle gpt search modal
+        dispatch(toggleGptSearchView());
+    }
+    const handleLanguageChange = (e) => {
+        // console.log(e.target.value);
+        dispatch(ChangeLanguage(e.target.value))
+    }
 
     return (
         // Netflix-like header: fixed, full width with a gradient background, using flex row layout so the logo stays fixed on the left
@@ -95,13 +107,25 @@ const Header = () => {
                     </ul>
                 )}
             </div>
-            
+
             {user && (
                 <div className="flex items-center relative">
+                    <select 
+                    className='bg-gray-900 text-white border-none rounded-md p-2 mr-4 cursor-pointer'
+                    onChange={handleLanguageChange}
+                    >
+                        {SUPPORTED_LANGUAGES.map(lang =>
+                            <option key={lang.identifier} value={lang.identifier}>
+                                {lang.name}
+                            </option>
+                        )}
+                    </select>
+                    <button className='text-2xl font-bold text-white cursor-pointer'
+                        onClick={handleGPTsearchButton}>GPT-Search</button>
                     <img
                         src={user?.photoURL}
                         alt="user-icon"
-                        className="w-10 h-10 rounded cursor-pointer"
+                        className="w-10 h-10 rounded cursor-pointer ml-4"
                     />
                     <button onClick={toggleMenu} ref={buttonRef} className="ml-2 text-white focus:outline-none">
                         ☰
