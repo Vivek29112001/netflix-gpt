@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { logo, USER_AVATAR } from '../../utils/constants';
+import { USER_AVATAR } from '../../utils/constants';
+import logo from '../../assets/ChatFlix.png'; // Adjust the path as necessary
 import { useNavigate } from 'react-router-dom';
 import Header from "../Header"
 
